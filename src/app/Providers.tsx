@@ -3,7 +3,9 @@ import React from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-export default function Providers({ children }) {
+const Providers: React.FC<{
+  children?: React.ReactNode;
+}> = ({ children }) => {
   const [queryClient] = React.useState(
     () =>
       new QueryClient({
@@ -21,4 +23,6 @@ export default function Providers({ children }) {
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
-}
+};
+
+export default Providers;
