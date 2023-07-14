@@ -1,27 +1,32 @@
 {
-  "name": "next-volto-client",
-  "version": "0.1.0",
+  "name": "plone-nextjs",
+  "version": "1.0.0-alpha",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "develop": "missdev --output=addons --fetch-https"
   },
   "dependencies": {
     "@plone/client": "^1.0.0-alpha.1",
     "@tanstack/react-query": "^4.29.19",
     "@tanstack/react-query-devtools": "^4.29.19",
+    "axios": "^1.4.0",
+    "next": "13.4.9",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "packageManager": "yarn@3.6.1",
+  "devDependencies": {
     "@types/node": "20.4.2",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.7",
-    "axios": "^1.4.0",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
-    "next": "13.4.9",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "mrs-developer": "^2.1.1",
+    "sass": "^1.63.6",
     "typescript": "5.1.6"
-  },
-  "packageManager": "yarn@3.6.1"
+  }
 }
