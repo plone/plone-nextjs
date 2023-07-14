@@ -1,3 +1,22 @@
+# plone-nextjs
+
+This is a PoC of a NextJS 13 app using the app router and the upcoming `@plone/client` and `@plone/components`. This is intended to serve as playground for the development of both packages.
+
+## Development
+
+This repo uses `mrs-developer` to pull these two packages.
+
+Run
+
+```shell
+yarn
+yarn develop
+```
+
+to pull the repos and make them available to the build.
+
+## Introduction
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
