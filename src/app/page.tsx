@@ -1,33 +1,18 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import ploneClient from "@plone/client";
-// import { useQuery } from "@tanstack/react-query";
 import { dehydrate, Hydrate } from "@tanstack/react-query";
 import getQueryClient from "./getQueryClient";
 import Data from "./data";
-import axios from "axios";
 
 const cli = ploneClient.initialize({
   apiPath: "http://localhost:8080/Plone",
 });
 
-// export async function getData() {
-//   const res = await fetch("http://localhost:8080/Plone/++api++");
-//   const data = await res.json();
-//   return data;
-// }
-
-export async function getData() {
-  const response = await axios.get("http://localhost:8080/Plone/++api++");
-  const data = response.data;
-  return data;
-}
-
 export default async function Home() {
   const { getContentQuery } = cli;
   const queryClient = getQueryClient();
-  // await queryClient.prefetchQuery(getContentQuery({ path: "/" }));
-  await queryClient.prefetchQuery(["data"], getData);
+  await queryClient.prefetchQuery(getContentQuery({ path: "/" }));
   // console.log(queryClient.queryCache.queries);
   const dehydratedState = dehydrate(queryClient);
 

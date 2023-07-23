@@ -1,39 +1,22 @@
 import Image from "next/image";
 import styles from "../page.module.css";
 import ploneClient from "@plone/client";
-// import { useQuery } from "@tanstack/react-query";
 import { dehydrate, Hydrate } from "@tanstack/react-query";
 import getQueryClient from "../getQueryClient";
 import Data from "../data";
-import axios from "axios";
 import { headers } from "next/headers";
 
 const cli = ploneClient.initialize({
   apiPath: "http://localhost:8080/Plone",
 });
 
-// export async function getData() {
-//   const res = await fetch("http://localhost:8080/Plone/++api++");
-//   const data = await res.json();
-//   return data;
-// }
-
-export async function getData() {
-  const headersList = headers();
-  const pathname = headersList.get("x-invoke-path") || "";
-  console.log(pathname);
-  const server = "http://localhost:8080/Plone/++api++";
-  const response = await axios.get(`${server}${pathname}`);
-  const data = response.data;
-  return data;
-}
-
 export default async function Home() {
   const { getContentQuery } = cli;
   const queryClient = getQueryClient();
-  // await queryClient.prefetchQuery(getContentQuery({ path: "/" }));
-  await queryClient.prefetchQuery(["data"], getData);
-  // console.log(queryClient.queryCache.queries);
+  const headersList = headers();
+  const pathname = headersList.get("x-invoke-path") || "";
+  await queryClient.prefetchQuery(getContentQuery({ path: pathname }));
+  // console.log(queryClient.queryCache.queries[0].state.data);
   const dehydratedState = dehydrate(queryClient);
 
   return (
