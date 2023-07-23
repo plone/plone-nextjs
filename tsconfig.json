@@ -28,9 +28,6 @@
             "@/*": [
                 "./src/*"
             ],
-            "@plone/client": [
-                "src/addons/client/src"
-            ],
             "@plone/components": [
                 "src/addons/components/src"
             ]
