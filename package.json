@@ -10,7 +10,7 @@
     "develop": "missdev --output=addons --fetch-https"
   },
   "dependencies": {
-    "@plone/client": "^1.0.0-alpha.2",
+    "@plone/client": "^1.0.0-alpha.3",
     "@tanstack/react-query": "^4.29.19",
     "@tanstack/react-query-devtools": "^4.29.19",
     "next": "13.4.9",
