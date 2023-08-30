@@ -254,9 +254,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plone/client@npm:^1.0.0-alpha.3":
-  version: 1.0.0-alpha.3
-  resolution: "@plone/client@npm:1.0.0-alpha.3"
+"@plone/client@npm:^1.0.0-alpha.5":
+  version: 1.0.0-alpha.5
+  resolution: "@plone/client@npm:1.0.0-alpha.5"
   dependencies:
     "@tanstack/react-query": 4.29.1
     axios: ^1.4.0
@@ -269,7 +269,7 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: f8d0ad283c65b6bf15c044f8e4ef0b1f76f7059168a494e2a718932d43081a1cc250e5b8e4aee978d900d2978c5520a36af106b2db41a2722a320c714d33a723
+  checksum: d848a10b0919cdef02f508c94ca038d104a183a415f1f9927e659095f5dcb8275b9017db88c8de655db70d4be76c53d45ad7d404b8c1ca866e6ad5f2468be14e
   languageName: node
   linkType: hard
 
@@ -3226,7 +3226,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "plone-nextjs@workspace:."
   dependencies:
-    "@plone/client": ^1.0.0-alpha.3
+    "@plone/client": ^1.0.0-alpha.5
     "@tanstack/react-query": ^4.29.19
     "@tanstack/react-query-devtools": ^4.29.19
     "@types/node": 20.4.2
