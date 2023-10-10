@@ -1,5 +1,5 @@
 import ploneClient from "@plone/client";
-import { dehydrate, Hydrate } from "@tanstack/react-query";
+import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import { headers } from "next/headers";
 import getQueryClient from "./getQueryClient";
 import Data from "./content";
@@ -14,16 +14,16 @@ export default async function Main() {
   const { getContentQuery } = cli;
   const queryClient = getQueryClient();
   const headersList = headers();
-  const path = headersList.get("x-invoke-path") || "";
+  const path = headersList.get("x-invoke-path") || "/";
   console.log(`Visiting: ${path}`);
   await queryClient.prefetchQuery(getContentQuery({ path, expand }));
   const dehydratedState = dehydrate(queryClient);
-
+  // console.log(dehydratedState.queries[0].state);
   return (
-    <Hydrate state={dehydratedState}>
+    <HydrationBoundary state={dehydratedState}>
       <main className="">
         <Data />
       </main>
-    </Hydrate>
+    </HydrationBoundary>
   );
 }

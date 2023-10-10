@@ -11,17 +11,16 @@ const cli = ploneClient.initialize({
 });
 
 export default function Content() {
-  // This useQuery could just as well happen in some deeper child to
-  // the "HydratedPosts"-component, data will be available immediately either way
   const { getContentQuery } = cli;
   const pathname = usePathname();
+  console.log(getContentQuery({ path: pathname }));
   const { data, isLoading } = useQuery(getContentQuery({ path: pathname }));
 
-  console.log(data?.["@components"]?.navigation?.items);
   if (data) {
     return (
-      <div>
+      <div style={{ fontSize: "20px" }}>
         <h1>{data.title}</h1>
+
         <ul>
           {data?.["@components"]?.navigation?.items?.map((item) => (
             <li key={item["@id"]}>
@@ -31,6 +30,10 @@ export default function Content() {
             </li>
           ))}
         </ul>
+
+        <div>
+          <pre>{JSON.stringify(data, null, 2)}</pre>
+        </div>
       </div>
     );
   }
