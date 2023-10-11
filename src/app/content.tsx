@@ -1,19 +1,14 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import ploneClient from "@plone/client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { flattenToAppURL } from "./utils";
-
-const cli = ploneClient.initialize({
-  apiPath: "http://localhost:8080/Plone",
-});
+import { usePloneClient } from "@plone/client";
 
 export default function Content() {
-  const { getContentQuery } = cli;
+  const { getContentQuery } = usePloneClient();
   const pathname = usePathname();
-  console.log(getContentQuery({ path: pathname }));
   const { data, isLoading } = useQuery(getContentQuery({ path: pathname }));
 
   if (data) {

@@ -23,13 +23,16 @@
                 "name": "next"
             }
         ],
-        "baseUrl": ".",
+        "baseUrl": "src",
         "paths": {
-            "@/*": [
-                "./src/*"
+            "@root/*": [
+                "*"
+            ],
+            "@plone/client": [
+                "lib/client/src"
             ],
             "@plone/components": [
-                "src/addons/components/src"
+                "lib/components/src"
             ]
         }
     },

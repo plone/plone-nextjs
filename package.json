@@ -7,10 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "develop": "missdev --output=addons --fetch-https"
+    "develop": "missdev --output=lib --fetch-https"
   },
+  "workspaces": [
+    "src/lib/client",
+    "src/lib/components"
+  ],
   "dependencies": {
-    "@plone/client": "^1.0.0-alpha.5",
     "@tanstack/react-query": "rc",
     "@tanstack/react-query-devtools": "rc",
     "next": "13.5.4",

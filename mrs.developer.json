@@ -1,9 +1,10 @@
 {
   "client": {
-    "develop": false,
+    "develop": true,
     "package": "@plone/client",
     "url": "git@github.com:plone/plone.restapi-client.git",
     "https": "https://github.com/plone/plone.restapi-client",
+    "branch": "addprovider",
     "path": "src"
   },
   "components": {
