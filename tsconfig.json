@@ -23,13 +23,13 @@
                 "name": "next"
             }
         ],
-        "baseUrl": ".",
+        "baseUrl": "src",
         "paths": {
-            "@/*": [
-                "./src/*"
+            "@root/*": [
+                "*"
             ],
-            "@plone/components": [
-                "src/addons/components/src"
+            "@plone/components/*": [
+                "lib/components/src/*"
             ]
         }
     },
@@ -37,6 +37,8 @@
         "next-env.d.ts",
         "**/*.ts",
         "**/*.tsx",
+        "**/*.js",
+        "**/*.jx",
         ".next/types/**/*.ts"
     ],
     "exclude": [
