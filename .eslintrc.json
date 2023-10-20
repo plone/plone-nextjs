@@ -4,10 +4,10 @@
     "import/resolver": {
       "alias": {
         "map": [
-          ["@plone/client", "@plone/client/src"]
+          ["@plone/components", "@plone/components/src"]
         ],
-        "extensions": [".js", ".jsx", ".json"]
-      }
-    }
-  }
+        "extensions": [".ts", ".tsx"]
+      },
+    },
+  },
 }

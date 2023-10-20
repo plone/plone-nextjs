@@ -1,10 +1,11 @@
-"use client";
+'use client';
 
-import { useQuery } from "@tanstack/react-query";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
-import { flattenToAppURL } from "./utils";
-import { usePloneClient } from "@plone/client";
+import { useQuery } from '@tanstack/react-query';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+import { flattenToAppURL } from './utils';
+import { usePloneClient } from '@plone/client/provider';
+// import Input from '@plone/components/components/Input/Input';
 
 export default function Content() {
   const { getContentQuery } = usePloneClient();
@@ -13,14 +14,20 @@ export default function Content() {
 
   if (data) {
     return (
-      <div style={{ fontSize: "20px" }}>
+      <div style={{ fontSize: '20px' }}>
         <h1>{data.title}</h1>
-
+        {/* <Input
+          name="field1"
+          title="field 1 title"
+          placeholder="Type something…"
+          description="Optional help text"
+          isRequired
+        /> */}
         <ul>
-          {data?.["@components"]?.navigation?.items?.map((item) => (
-            <li key={item["@id"]}>
-              <Link href={flattenToAppURL(item["@id"])}>
-                {flattenToAppURL(item["@id"])}
+          {data?.['@components']?.navigation?.items?.map((item) => (
+            <li key={item['@id']}>
+              <Link href={flattenToAppURL(item['@id'])}>
+                {flattenToAppURL(item['@id'])}
               </Link>
             </li>
           ))}
@@ -33,5 +40,5 @@ export default function Content() {
     );
   }
 
-  return "";
+  return '';
 }

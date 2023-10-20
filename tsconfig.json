@@ -28,11 +28,8 @@
             "@root/*": [
                 "*"
             ],
-            "@plone/client": [
-                "lib/client/src"
-            ],
-            "@plone/components": [
-                "lib/components/src"
+            "@plone/components/*": [
+                "lib/components/src/*"
             ]
         }
     },
@@ -40,6 +37,8 @@
         "next-env.d.ts",
         "**/*.ts",
         "**/*.tsx",
+        "**/*.js",
+        "**/*.jx",
         ".next/types/**/*.ts"
     ],
     "exclude": [
