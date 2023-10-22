@@ -1,18 +1,3 @@
-### Defensive settings for make:
-#     https://tech.davis-hansson.com/p/make/
-SHELL:=bash
-.ONESHELL:
-.SHELLFLAGS:=-eu -o pipefail -c
-.SILENT:
-.DELETE_ON_ERROR:
-MAKEFLAGS+=--warn-undefined-variables
-MAKEFLAGS+=--no-builtin-rules
-IMAGE_NAME=ghcr.io/kitconcept/intranet-kitconcept-frontend
-IMAGE_TAG=latest
-
-VOLTO_VERSION = 17.2.0
-
-NODEBIN = ./node_modules/.bin
 
 # Add the following 'help' target to your Makefile
 # And add help text after each target name starting with '\#\#'
