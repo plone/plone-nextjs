@@ -1,5 +1,5 @@
-import { QueryClient } from "@tanstack/react-query";
-import { cache } from "react";
+import { QueryClient } from '@tanstack/react-query';
+import { cache } from 'react';
 
 const getQueryClient = cache(
   () =>
@@ -9,6 +9,6 @@ const getQueryClient = cache(
           staleTime: Infinity,
         },
       },
-    })
+    }),
 );
 export default getQueryClient;

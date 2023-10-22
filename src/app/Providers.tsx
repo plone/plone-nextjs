@@ -1,9 +1,10 @@
-"use client";
-import React from "react";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { PloneClientProvider } from "@plone/client/provider";
-import PloneClient from "@plone/client";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+'use client';
+import React from 'react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { PloneClientProvider } from '@plone/client/provider';
+import PloneClient from '@plone/client';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import config from './config';
 
 const Providers: React.FC<{
   children?: React.ReactNode;
@@ -22,13 +23,13 @@ const Providers: React.FC<{
             staleTime: 60 * 1000,
           },
         },
-      })
+      }),
   );
 
   const [ploneClient] = React.useState(() =>
     PloneClient.initialize({
-      apiPath: "http://localhost:8080/Plone",
-    })
+      apiPath: config.settings.apiPath,
+    }),
   );
 
   return (

@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "prettier": "prettier --check 'src/**/*.{js,jsx,ts,tsx}'",
+    "prettier:fix": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
     "develop": "missdev --output=lib --fetch-https"
   },
   "workspaces": [
@@ -28,6 +30,7 @@
     "eslint": "8.51.0",
     "eslint-config-next": "13.5.4",
     "mrs-developer": "^2.1.1",
+    "prettier": "3.0.3",
     "sass": "^1.69.1",
     "typescript": "5.2.2"
   }

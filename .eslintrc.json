@@ -7,7 +7,7 @@
           ["@plone/components", "@plone/components/src"]
         ],
         "extensions": [".ts", ".tsx"]
-      },
-    },
-  },
+      }
+    }
+  }
 }
