@@ -25,8 +25,11 @@ export default function Content() {
         /> */}
         <ul>
           {data?.['@components']?.navigation?.items?.map((item) => (
+            // @ts-ignore
             <li key={item['@id']}>
+              {/* @ts-ignore */}
               <Link href={flattenToAppURL(item['@id'])}>
+                {/* @ts-ignore */}
                 {flattenToAppURL(item['@id'])}
               </Link>
             </li>
