@@ -38,7 +38,6 @@ format: format-prettier format-lint format-stylelint ## Format the codebase acco
 install: ## Install the frontend
 	@echo "Install frontend"
 	$(MAKE) preinstall
-	yarn -v
 	yarn install
 
 .PHONY: preinstall

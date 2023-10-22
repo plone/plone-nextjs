@@ -10,6 +10,8 @@ import { usePloneClient } from '@plone/client/provider';
 export default function Content() {
   const { getContentQuery } = usePloneClient();
   const pathname = usePathname();
+  console.log(usePloneClient().config.apiPath);
+  console.log('pathname in cli', pathname);
   const { data, isLoading } = useQuery(getContentQuery({ path: pathname }));
 
   if (data) {
