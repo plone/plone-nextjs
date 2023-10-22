@@ -9,8 +9,8 @@ const nextConfig = {
       {
         source: '/\\+\\+api\\+\\+/:slug*',
         destination:
-          // 'https://static.197.123.88.23.clients.your-server.de/api/:slug*',
-          `${apiServerURL}/:slug*`,
+          'https://static.197.123.88.23.clients.your-server.de/api/:slug*',
+        // `${apiServerURL}/:slug*`,
       },
     ];
   },
