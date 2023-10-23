@@ -24,7 +24,7 @@ We have to create this environment variable in the Vercel deployment's control p
 
 ### Application rewrite config
 
-Our NextJS app a rewrite should be configured as follows:
+In order to avoid CORS and maintain the server counterpart private, our NextJS app should have a rewrite and should be configured as follows:
 
 ```
 const nextConfig = {
@@ -38,8 +38,6 @@ const nextConfig = {
       {
         source: '/\\+\\+api\\+\\+/:slug*',
         destination:
-          // 'https://my_server_DNS_name/api/:slug*',
-          // `${apiServerURL}/:slug*`,
           `${apiServerURL}/VirtualHostBase/https/${process.env.NEXT_PUBLIC_VERCEL_URL}%3A443/Plone/%2B%2Bapi%2B%2B/VirtualHostRoot/:slug*`,
       },
     ];
@@ -47,7 +45,7 @@ const nextConfig = {
 };
 ```
 
-Plone Client is using the ++api++ prefix as default, so we should create a redirect in our app pointing to the api server, but using the traditional Plone's VHM config.
+Plone Client is using the `++api++` prefix as default, so we should create a redirect in our app pointing to the api server, but using the traditional Plone's VHM config.
 
 NextJS rewrites are picky on the `destination` field because the library that is used for it does not support URLS with regex operators.
 Therefore, we can't use the usual `++api++` route for the rewrite.
