@@ -5,16 +5,18 @@ const nextConfig = {
     const apiServerURL =
       process.env.API_SERVER_URL ||
       'http://localhost:8080/Plone/%2B%2Bapi%2B%2B';
-
     return [
       {
         source: '/\\+\\+api\\+\\+/:slug*',
         destination:
-          // 'https://static.197.123.88.23.clients.your-server.de/api/:slug*',
-          `${apiServerURL}/:slug*`,
+          'https://static.197.123.88.23.clients.your-server.de/api/:slug*',
+        // `${apiServerURL}/:slug*`,
       },
     ];
   },
 };
 
+const apiServerURL =
+  process.env.API_SERVER_URL || 'http://localhost:8080/Plone/%2B%2Bapi%2B%2B';
+console.log('next-config api server', apiServerURL);
 module.exports = nextConfig;

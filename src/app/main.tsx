@@ -23,9 +23,6 @@ export default async function Main() {
   await queryClient.prefetchQuery(getContentQuery({ path, expand }));
   const dehydratedState = dehydrate(queryClient);
 
-  console.log('dehydrated', dehydratedState.queries[0]);
-  console.log('data', dehydratedState.queries[0].state.data);
-
   return (
     <HydrationBoundary state={dehydratedState}>
       <main className="">
