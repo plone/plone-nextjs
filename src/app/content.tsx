@@ -13,6 +13,7 @@ export default function Content() {
   console.log(usePloneClient().config.apiPath);
   console.log('pathname in cli', pathname);
   const { data, isLoading } = useQuery(getContentQuery({ path: pathname }));
+  console.log('data in cli', data);
 
   if (data) {
     return (
