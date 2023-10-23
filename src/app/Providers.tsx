@@ -32,8 +32,6 @@ const Providers: React.FC<{
     }),
   );
 
-  console.log('Providers.tsx', config.settings.apiPath);
-
   return (
     <PloneClientProvider client={ploneClient}>
       <QueryClientProvider client={queryClient}>

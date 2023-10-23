@@ -13,9 +13,6 @@ const expand = ['breadcrumbs', 'navigation'];
 
 export default async function Main() {
   const { getContentQuery } = cli;
-
-  console.log('cli config in main RSC', cli.config.apiPath);
-
   const queryClient = getQueryClient();
   const headersList = headers();
   const path = headersList.get('x-invoke-path') || '/';

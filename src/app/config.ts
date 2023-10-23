@@ -6,6 +6,4 @@ const config = {
   settings,
 };
 
-console.log('config', config.settings.apiPath);
-
 export default config;
