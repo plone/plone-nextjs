@@ -1,4 +1,4 @@
-import ploneClient from '@plone/client';
+import ploneClient from '@plone/client/index';
 import { dehydrate, HydrationBoundary } from '@tanstack/react-query';
 import { headers } from 'next/headers';
 import getQueryClient from './getQueryClient';
@@ -23,6 +23,8 @@ export default async function Main() {
   return (
     <HydrationBoundary state={dehydratedState}>
       <main className="">
+        apiPath in main RSC: {cli.config.apiPath}
+        <br /> the content path in main RSC: {path}
         <Content />
       </main>
     </HydrationBoundary>
