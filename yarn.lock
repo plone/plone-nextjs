@@ -2685,8 +2685,8 @@ __metadata:
     "@tanstack/react-query": 5.0.5
     "@testing-library/jest-dom": 5.16.5
     "@testing-library/react": 13.4.0
-    "@types/react": 18.0.34
-    "@types/react-dom": 18.0.11
+    "@types/react": 18.2.27
+    "@types/react-dom": 18.2.12
     "@types/uuid": ^9.0.2
     "@typescript-eslint/eslint-plugin": 5.57.1
     "@typescript-eslint/parser": 5.57.1
@@ -6522,15 +6522,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.0.11":
-  version: 18.0.11
-  resolution: "@types/react-dom@npm:18.0.11"
-  dependencies:
-    "@types/react": "*"
-  checksum: 579691e4d5ec09688087568037c35edf8cfb1ab3e07f6c60029280733ee7b5c06d66df6fcc90786702c93ac8cb13bc7ff16c79ddfc75d082938fbaa36e1cdbf4
-  languageName: node
-  linkType: hard
-
 "@types/react-dom@npm:18.2.12":
   version: 18.2.12
   resolution: "@types/react-dom@npm:18.2.12"
@@ -6557,17 +6548,6 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: 36989f638201bfe2f4110b06c119180f6df9c0e13d7060481e82e7a745f81745a01ae543c478a25b61e0767cb52e82da2ad5b0dedacabf99339e523d06176705
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:18.0.34":
-  version: 18.0.34
-  resolution: "@types/react@npm:18.0.34"
-  dependencies:
-    "@types/prop-types": "*"
-    "@types/scheduler": "*"
-    csstype: ^3.0.2
-  checksum: 60d2766e7644ec480075bbb154bf8fb8476089466b643662ef59964e27cae2d8c71fd9c717a4dfa9627c3e050fa2ae866d10d16f66b4509058d1bfe2a564b18c
   languageName: node
   linkType: hard
 
