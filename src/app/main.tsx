@@ -24,7 +24,7 @@ export default async function Main() {
   const dehydratedState = dehydrate(queryClient);
 
   console.log(await getContentQuery({ path, expand }));
-
+  console.log('queryclient', queryClient);
   console.log('dehydrated', dehydratedState.queries[0]);
   // console.log('data', dehydratedState.queries[0].state.data);
 
