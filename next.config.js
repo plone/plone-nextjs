@@ -5,6 +5,7 @@ const nextConfig = {
     const apiServerURL =
       process.env.API_SERVER_URL ||
       'http://localhost:8080/Plone/%2B%2Bapi%2B%2B';
+    console.log('next-config api server', apiServerURL);
     return [
       {
         source: '/\\+\\+api\\+\\+/:slug*',
@@ -16,7 +17,4 @@ const nextConfig = {
   },
 };
 
-const apiServerURL =
-  process.env.API_SERVER_URL || 'http://localhost:8080/Plone/%2B%2Bapi%2B%2B';
-console.log('next-config api server', apiServerURL);
 module.exports = nextConfig;
