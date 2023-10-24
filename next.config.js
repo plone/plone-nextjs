@@ -11,7 +11,8 @@ const nextConfig = {
         source: '/\\+\\+api\\+\\+/:slug*',
         destination:
           // 'https://static.197.123.88.23.clients.your-server.de/api/:slug*',
-          `${apiServerURL}/:slug*`,
+          // `${apiServerURL}/:slug*`,
+          `${apiServerURL}/VirtualHostBase/https/${process.env.NEXT_PUBLIC_VERCEL_URL}%3A443/Plone/%2B%2Bapi%2B%2B/VirtualHostRoot/:slug*`,
       },
     ];
   },

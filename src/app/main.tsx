@@ -1,4 +1,4 @@
-import ploneClient from '@plone/client';
+import ploneClient from '@plone/client/index';
 import { dehydrate, HydrationBoundary } from '@tanstack/react-query';
 import { headers } from 'next/headers';
 import getQueryClient from './getQueryClient';
@@ -13,9 +13,6 @@ const expand = ['breadcrumbs', 'navigation'];
 
 export default async function Main() {
   const { getContentQuery } = cli;
-
-  console.log('cli config in main RSC', cli.config.apiPath);
-
   const queryClient = getQueryClient();
   const headersList = headers();
   const path = headersList.get('x-invoke-path') || '/';
@@ -23,14 +20,11 @@ export default async function Main() {
   await queryClient.prefetchQuery(getContentQuery({ path, expand }));
   const dehydratedState = dehydrate(queryClient);
 
-  console.log(await getContentQuery({ path, expand }));
-  console.log('queryclient', queryClient);
-  console.log('dehydrated', dehydratedState.queries[0]);
-  // console.log('data', dehydratedState.queries[0].state.data);
-
   return (
     <HydrationBoundary state={dehydratedState}>
       <main className="">
+        apiPath in main RSC: {cli.config.apiPath}
+        <br /> the content path in main RSC: {path}
         <Content />
       </main>
     </HydrationBoundary>

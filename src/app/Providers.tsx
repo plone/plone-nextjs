@@ -2,7 +2,7 @@
 import React from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { PloneClientProvider } from '@plone/client/provider';
-import PloneClient from '@plone/client';
+import PloneClient from '@plone/client/index';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import config from './config';
 
@@ -31,8 +31,6 @@ const Providers: React.FC<{
       apiPath: config.settings.apiPath,
     }),
   );
-
-  console.log('Providers.tsx', config.settings.apiPath);
 
   return (
     <PloneClientProvider client={ploneClient}>

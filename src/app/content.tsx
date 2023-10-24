@@ -10,10 +10,7 @@ import { usePloneClient } from '@plone/client/provider';
 export default function Content() {
   const { getContentQuery } = usePloneClient();
   const pathname = usePathname();
-  console.log(usePloneClient().config.apiPath);
-  console.log('pathname in cli', pathname);
   const { data, isLoading } = useQuery(getContentQuery({ path: pathname }));
-  console.log('data in cli', data);
 
   if (data) {
     return (
@@ -28,11 +25,8 @@ export default function Content() {
         /> */}
         <ul>
           {data?.['@components']?.navigation?.items?.map((item) => (
-            // @ts-ignore
             <li key={item['@id']}>
-              {/* @ts-ignore */}
               <Link href={flattenToAppURL(item['@id'])}>
-                {/* @ts-ignore */}
                 {flattenToAppURL(item['@id'])}
               </Link>
             </li>

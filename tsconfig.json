@@ -30,6 +30,9 @@
             ],
             "@plone/components/*": [
                 "lib/components/src/*"
+            ],
+            "@plone/client/*": [
+                "lib/client/src/*"
             ]
         }
     },
