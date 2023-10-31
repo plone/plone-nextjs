@@ -7,7 +7,7 @@ import config from './config';
  * directory other than /, eg. /myapp)
  * @method flattenToAppURL
  */
-export function flattenToAppURL(url: string) {
+export function flattenToAppURL(url: string | undefined) {
   const { settings } = config;
   return (url && url.replace(settings.apiPath, '')) || '/';
 }

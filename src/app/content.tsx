@@ -38,7 +38,6 @@ export default function Content() {
             </li>
           ))}
         </ul>
-
         <div>
           <pre>{JSON.stringify(data, null, 2)}</pre>
         </div>
