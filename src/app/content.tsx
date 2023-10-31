@@ -5,7 +5,8 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { flattenToAppURL } from './utils';
 import { usePloneClient } from '@plone/client/provider';
-// import Input from '@plone/components/components/Input/Input';
+import Breadcrumbs from '@plone/components/components/Breadcrumbs/Breadcrumbs';
+import '../lib/components/src/styles/main.scss';
 
 export default function Content() {
   const { getContentQuery } = usePloneClient();
@@ -23,6 +24,11 @@ export default function Content() {
           description="Optional help text"
           isRequired
         /> */}
+        <Breadcrumbs
+          items={data['@components'].breadcrumbs.items || []}
+          root={data['@components'].breadcrumbs.root}
+          includeRoot
+        />
         <ul>
           {data?.['@components']?.navigation?.items?.map((item) => (
             <li key={item['@id']}>

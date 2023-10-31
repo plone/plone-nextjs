@@ -1,9 +1,11 @@
 'use client';
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { PloneClientProvider } from '@plone/client/provider';
 import PloneClient from '@plone/client/index';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { RouterProvider } from 'react-aria-components';
 import config from './config';
 
 const Providers: React.FC<{
@@ -32,13 +34,17 @@ const Providers: React.FC<{
     }),
   );
 
+  let router = useRouter();
+
   return (
-    <PloneClientProvider client={ploneClient}>
-      <QueryClientProvider client={queryClient}>
-        {children}
-        <ReactQueryDevtools initialIsOpen={false} />
-      </QueryClientProvider>
-    </PloneClientProvider>
+    <RouterProvider navigate={router.push}>
+      <PloneClientProvider client={ploneClient}>
+        <QueryClientProvider client={queryClient}>
+          {children}
+          <ReactQueryDevtools initialIsOpen={false} />
+        </QueryClientProvider>
+      </PloneClientProvider>
+    </RouterProvider>
   );
 };
 
