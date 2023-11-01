@@ -20,7 +20,7 @@ jobs:
 
       # node install
       - name: Install dependencies
-        run: yarn
+        run: make install
 
       # ESlint
       - name: ESlint
