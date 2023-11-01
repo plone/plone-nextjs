@@ -15,10 +15,10 @@
     "src/lib/client"
   ],
   "dependencies": {
-    "@plone/components": "1.2.0",
+    "@plone/components": "1.4.1",
     "@tanstack/react-query": "^5.0.5",
     "@tanstack/react-query-devtools": "^5.4.2",
-    "next": "14.0.0",
+    "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -28,7 +28,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.0.0",
+    "eslint-config-next": "14.0.1",
     "mrs-developer": "^2.1.1",
     "prettier": "3.0.3",
     "sass": "^1.69.1",
