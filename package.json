@@ -12,23 +12,23 @@
     "develop": "missdev --output=lib --fetch-https"
   },
   "workspaces": [
-    "src/lib/components",
     "src/lib/client"
   ],
   "dependencies": {
+    "@plone/components": "1.4.1",
     "@tanstack/react-query": "^5.0.5",
-    "@tanstack/react-query-devtools": "^5.1.0",
-    "next": "13.5.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "@tanstack/react-query-devtools": "^5.4.2",
+    "next": "14.0.1",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "packageManager": "yarn@3.6.1",
   "devDependencies": {
-    "@types/node": "20.8.4",
-    "@types/react": "18.2.27",
-    "@types/react-dom": "18.2.12",
-    "eslint": "8.51.0",
-    "eslint-config-next": "13.5.4",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.1",
     "mrs-developer": "^2.1.1",
     "prettier": "3.0.3",
     "sass": "^1.69.1",

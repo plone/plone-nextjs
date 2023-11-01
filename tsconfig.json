@@ -13,7 +13,7 @@
         "noEmit": true,
         "esModuleInterop": true,
         "module": "esnext",
-        "moduleResolution": "node",
+        "moduleResolution": "bundler",
         "resolveJsonModule": true,
         "isolatedModules": true,
         "jsx": "preserve",
@@ -28,11 +28,11 @@
             "@root/*": [
                 "*"
             ],
-            "@plone/components/*": [
-                "lib/components/src/*"
-            ],
             "@plone/client/*": [
                 "lib/client/src/*"
+            ],
+            "@plone/components/*": [
+                "lib/components/src/*"
             ]
         }
     },
@@ -45,6 +45,9 @@
         ".next/types/**/*.ts"
     ],
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "./src/lib/components/setupTesting.ts",
+        "./src/lib/**/*.test.tsx",
+        "./src/lib/**/*.stories.tsx"
     ]
 }

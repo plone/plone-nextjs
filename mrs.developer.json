@@ -8,9 +8,11 @@
     "path": "src/*"
   },
   "components": {
+    "develop": true,
     "package": "@plone/components/*",
     "url": "git@github.com:plone/components.git",
     "https": "https://github.com/plone/components",
-    "path": "src/*"
+    "path": "src/*",
+    "branch": "compilepackage"
   }
 }
