@@ -12,7 +12,6 @@
     "package": "@plone/components/*",
     "url": "git@github.com:plone/components.git",
     "https": "https://github.com/plone/components",
-    "path": "src/*",
-    "branch": "compilepackage"
+    "path": "src/*"
   }
 }
