@@ -1,6 +1,12 @@
+# Important Notice
+
+This proof of concept was moved to be part of the Volto monorepo on 2023-12-17. This repository is archived and read-only. 
+
+See: https://github.com/plone/volto/tree/main/apps/nextjs
+
 # plone-nextjs
 
-This is a PoC of a NextJS 13 app using the app router and the upcoming `@plone/client` and `@plone/components`. This is intended to serve as playground for the development of both packages.
+This is a proof of concept of a Next.js app using the app router and the upcoming `@plone/client` and `@plone/components`. This is intended to serve as playground for the development of both packages.
 
 ## Development
 
